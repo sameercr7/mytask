@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# MYTASK
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Task Breakdown:
 
-## Available Scripts
+**Frontend Development:**
 
-In the project directory, you can run:
+1. Create the frontend UI:
+   - Design and create 5 UI cards.
+   - Make the cards draggable and droppable using the DND library in React.
+   - Manage the state of the cards using the useState hook in React.
+   - Implement reordering functionality for the cards.
 
-### `npm start`
+2. Display GIF on cards:
+   - Embed the GIF URLs obtained from the internet onto the cards.
+   - Ensure that the GIFs are displayed correctly on the cards.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Implement overlay on GIF click:
+   - On clicking the overlay of a GIF, display it in the middle of the screen.
+   - Implement an event listener and handle function to manage the clicking behavior.
+   - When the "Esc" button is pressed, the image should return to its original position.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Backend Development:**
 
-### `npm test`
+1. Create the backend server:
+   - Set up a remote server that hosts the static.json file.
+   - Use the Express framework for the backend development.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Make the title dynamically changeable:
+   - Implement functionality to dynamically change the title in the static.json file.
+   - Update the frontend UI when the title changes.
 
-### `npm run build`
+3. Implement spinner:
+   - Create a spinner component to indicate loading.
+   - After every 5 seconds, show the spinner briefly.
+   - Note: Due to the small data size, the spinner may appear and disappear quickly.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Running the Commands:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Start the backend server:
+   - Navigate to the "mytask" folder using the command `cd ..` (move up one level).
+   - Move to the backend folder using `cd mytask/backend`.
+   - Run the backend server using the command `node app.js`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Start the frontend:
+   - Navigate to the root directory of the project (where the frontend is located).
+   - Run the frontend using the command `npm start`.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The provided information has been divided into two sections: frontend development and backend development. Each section outlines the specific tasks to be completed. Additionally, instructions are given on how to run the backend and frontend servers separately.
