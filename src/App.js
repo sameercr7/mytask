@@ -14,17 +14,10 @@ const App = () => {
 
   const [cards, setCards] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [timer, setTimer] = useState(0);
 
   useEffect(() => {
     fetchData();
-
-    const interval = setInterval(() => {
-      fetchData();
-    }, 5000);
-
-    return () => {
-      clearInterval(interval);
-    };
   }, []);
 
   const fetchData = () => {
@@ -52,12 +45,24 @@ const App = () => {
     if (dragIndex === dropIndex) return;
 
     const updatedCards = [...cards];
-    [updatedCards[dragIndex], updatedCards[dropIndex]] = [
-      updatedCards[dropIndex],
-      updatedCards[dragIndex],
-    ];
+    const draggedCard = updatedCards[dragIndex];
 
+    // Check if positions are different
+    if (dragIndex < dropIndex) {
+      for (let i = dragIndex; i < dropIndex; i++) {
+        updatedCards[i] = updatedCards[i + 1];
+      }
+    } else {
+      for (let i = dragIndex; i > dropIndex; i--) {
+        updatedCards[i] = updatedCards[i - 1];
+      }
+    }
+
+    updatedCards[dropIndex] = draggedCard;
     setCards(updatedCards);
+
+    // Update timer
+    setTimer(Date.now());
   };
 
   return (
@@ -98,6 +103,10 @@ const App = () => {
           )}
         </div>
       </DroppableContainer>
+
+      <div style={{ position: 'fixed', bottom: 10, left: 0, width: '100%', textAlign: 'center' }}>
+        {timer !== 0 && <p>Last position change: {new Date(timer).toLocaleTimeString()}</p>}
+      </div>
     </div>
   );
 };
