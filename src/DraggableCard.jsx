@@ -66,6 +66,7 @@ const DraggableCard = ({ id, text, index, onDrop, gifUrl }) => {
     };
 
     document.addEventListener('keydown', handleEscKey);
+    
 
     return () => {
       document.removeEventListener('keydown', handleEscKey);
